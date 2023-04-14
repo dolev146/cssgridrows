@@ -1,0 +1,25 @@
+html {
+  /* min-height on body doesn't work unless it's parent (html) has an explicit height */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* min-height because content larger than 100% of the view height should scroll */
+  min-height: 100%;
+  display: grid;
+  /* we have 3 rows: header, main and footer. We want the main content to fill the empty space when the content doesn't fill the viewport */
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  background: red;
+}
+
+.main {
+  background: yellow;
+}
+
+.footer {
+  background: blue;
+}
